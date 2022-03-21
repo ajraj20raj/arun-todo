@@ -10,9 +10,11 @@ function TodoApp() {
   };
 
   const AddTask = () => {
-    if (task !== "") {
+    if (task.length < 3) {
+      alert("enter the more letters");
+    } else if (task.length > 3) {
       const taskDetails = {
-        id: Math.floor(Math.random() * 1000),
+        id: Math.floor(Math.random() * 1000), //if (task !== "")
         value: task,
         isCompleted: false,
       };
